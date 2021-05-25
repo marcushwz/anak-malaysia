@@ -1,0 +1,44 @@
+inherit_gem:
+  rubocop-shopify: rubocop.yml
+
+AllCops:
+  Exclude:
+    - "db/**/*"
+    - "config/**/*"
+    - "script/**/*"
+    - "bin/{rails,rake}"
+
+Style/MethodCallWithArgsParentheses:
+  IgnoredMethods:
+    - "to"
+    - "not_to"
+    - "to_not"
+    - "describe"
+
+Style/WordArray:
+  Enabled: true
+  EnforcedStyle: brackets
+
+Lint/Syntax:
+  Enabled: true
+
+Layout/FirstArrayElementLineBreak:
+  Enabled: true
+
+Layout/FirstMethodArgumentLineBreak:
+  Enabled: true
+
+Layout/FirstArgumentIndentation:
+  Enabled: true
+  EnforcedStyle: consistent
+
+Layout/FirstParameterIndentation:
+  Enabled: true
+  EnforcedStyle: consistent
+
+Layout/MultilineMethodArgumentLineBreaks:
+  Enabled: true
+
+Layout/MultilineOperationIndentation:
+  Enabled: true
+
