@@ -9,28 +9,40 @@ module.exports = {
     extend: {
       colors: {
         nord: {
-          0: "#2e3440",
-          1: "#3b4252",
-          2: "#434C5E",
-          3: "#4c566a",
-          4: "#d8dee9",
-          5: "#e5e9f0",
-          6: "#eceff4",
-          7: "#8fbcbb",
-          8: "#88c0d0",
-          9: "#81a1c1",
-          10: "#5e81ac",
-          11: "#bf616a",
-          12: "#d08770",
-          13: "#ebcb8b",
-          14: "#a3be8c",
-          15: "#b48ead",
+          night: {
+            light: "#4c566a",
+            DEFAULT: "#434C5E",
+            dark: "#3b4252",
+            darker: "#2e3440",
+          },
+          snow: {
+            light: "#eceff4",
+            DEFAULT: "#e5e9f0",
+            dark: "#d8dee9",
+          },
+          primary: {
+            light: "#95c7d5",
+            DEFAULT: "#88c0d0",
+            dark: "#7cbacb",
+          },
+          frost: {
+            light: "#8fbcbb",
+            DEFAULT: "#81a1c1",
+            dark: "#5e81ac",
+          },
+          red: "#bf616a",
+          orange: "#d08770",
+          yellow: "#ebcb8b",
+          green: "#a3be8c",
+          purple: "#b48ead",
         },
       },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      borderStyle: ["hover"],
+    },
   },
   plugins: [],
 };
