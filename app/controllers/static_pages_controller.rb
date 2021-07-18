@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
   end
 
   def about
+    # new commit for nord theme
   end
 
   def contribution
