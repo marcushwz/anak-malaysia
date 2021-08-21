@@ -5,3 +5,30 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@layer components {
+  .btn {
+    @apply mt-8 py-2 px-4 font-medium text-lg shadow-md transition cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply bg-nord-primary-light text-nord-night transform
+    hover:-translate-y-0.5 hover:shadow-lg hover:bg-nord-primary rounded;
+  }
+
+  .btn-secondary {
+    @apply bg-nord-snow dark:bg-nord-night-dark text-nord-night-light
+    rounded-lg border-solid border-2 border-nord-night-light 
+    dark:border-nord-snow dark:text-nord-snow hover:border-nord-primary-dark hover:text-nord-primary-dark 
+    dark:hover:border-nord-primary dark:hover:text-nord-primary;
+  }
+
+  .nav-item {
+    @apply p-2 m-2 text-lg tracking-wider rounded-lg text-nord-night-light hover:bg-nord-snow-dark 
+    dark:text-nord-snow-dark dark:hover:bg-nord-night-light;
+  }
+
+  .nav-item-dropdown {
+    @apply block px-4 py-2 mt-2 text-lg tracking-wider rounded-lg text-nord-night-light hover:bg-nord-snow-dark 
+    dark:text-nord-snow-dark dark:hover:bg-nord-night-light;
+  }
+}

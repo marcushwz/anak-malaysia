@@ -10,10 +10,10 @@ module.exports = {
       colors: {
         nord: {
           night: {
-            light: "#4c566a",
-            DEFAULT: "#434C5E",
-            dark: "#3b4252",
-            darker: "#2e3440",
+            lighter: "#3b4252",
+            light: "#39404f",
+            DEFAULT: "#2e3440",
+            dark: "#292e39",
           },
           snow: {
             light: "#eceff4",
