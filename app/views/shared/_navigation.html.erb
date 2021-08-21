@@ -1,4 +1,4 @@
-<header x-data="{ mobileMenuOpen: false }" data-controller="theme" class="flex items-center sticky -top-8 z-50 h-24 w-full bg-nord-snow-light dark:bg-nord-night-darker shadow-sm">
+<header x-data="{ mobileMenuOpen: false }" data-controller="theme" class="flex items-center sticky -top-8 z-50 h-24 w-full bg-nord-snow-light dark:bg-nord-night shadow-sm">
   <div class="sticky flex-1 top-0 h-16 flex px-2 py-4 max-w-screen-xl mx-auto items-center justify-between md:px-6 lg:px-8">
     <div class="p-4 flex">
       <%= link_to image_tag("icons/hibiscus.png"), static_pages_home_path, class: "w-8" %>
@@ -6,9 +6,10 @@
     </div>
     <nav class="flex"  @click.away="mobileMenuOpen = false">
       <div class="hidden md:flex md:flex-row">
-        <%= link_to "Stories", static_pages_home_path, class: "p-2 m-2 text-lg tracking-wider rounded-lg text-nord-night-light hover:bg-nord-snow-dark dark:text-nord-snow-dark dark:hover:bg-nord-night-light" %>
-        <%= link_to "About", static_pages_about_path, class: "p-2 m-2 text-lg tracking-wider rounded-lg text-nord-night-light hover:bg-nord-snow-dark dark:text-nord-snow-dark dark:hover:bg-nord-night-light" %>
-        <%= link_to "Contribution", static_pages_contribution_path, class: "p-2 m-2 text-lg tracking-wider rounded-lg text-nord-night-light hover:bg-nord-snow-dark dark:text-nord-snow-dark dark:hover:bg-nord-night-light" %>
+        <%= link_to "History", static_pages_history_path, class: "nav-item" %>
+        <%= link_to "Politicians", static_pages_politicians_path, class: "nav-item" %>
+        <%= link_to "Malaysian", static_pages_malaysian_path, class: "nav-item" %>
+        <%= link_to "About", static_pages_about_path, class: "nav-item" %>
       </div>
       <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="mobileMenuOpen = !mobileMenuOpen">
         <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -16,27 +17,35 @@
           <path x-show="mobileMenuOpen" class="fill-current text-nord-night-light dark:text-nord-snow-dark" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"></path>
         </svg>
         <div x-show.transition.in="mobileMenuOpen" @click.away="mobileMenuOpen = false" class="absolute right-0 w-full mt-4 origin-top-right rounded-md shadow-lg md:w-48">
-          <div class="px-2 py-2 bg-nord-snow-light rounded-md shadow dark:bg-nord-night-darker">
-            <%= link_to "Stories", static_pages_home_path, class: "block px-4 py-2 mt-2 text-lg tracking-wider rounded-lg text-nord-night-light hover:bg-nord-snow-dark dark:text-nord-snow-dark dark:hover:bg-nord-night-light" %>
-            <%= link_to "About", static_pages_about_path, class: "block px-4 py-2 mt-2 text-lg tracking-wider rounded-lg text-nord-night-light hover:bg-nord-snow-dark dark:text-nord-snow-dark dark:hover:bg-nord-night-light" %>
-            <%= link_to "Contribution", static_pages_contribution_path, class: "block px-4 py-2 mt-2 text-lg tracking-wider rounded-lg text-nord-night-light hover:bg-nord-snow-dark dark:text-nord-snow-dark dark:hover:bg-nord-night-light" %>
+          <div class="px-2 py-2 bg-nord-snow-light rounded-md shadow dark:bg-nord-night">
+            <%= link_to "History", static_pages_history_path, class: "nav-item-dropdown" %>
+            <%= link_to "Politicians", static_pages_politicians_path, class: "nav-item-dropdown" %>
+            <%= link_to "Malaysian", static_pages_malaysian_path, class: "nav-item-dropdown" %>
+            <%= link_to "About", static_pages_about_path, class: "nav-item-dropdown" %>
           </div>
         </div>
       </button>
       <button data-action="theme#toggle" class="w-8 p-1 m-2 rounded-lg focus:outline-none hover:bg-nord-snow-dark dark:hover:bg-nord-night-light">
         <svg viewBox="-2 -3 28 28">
-          <path data-theme-target="moon" class="hidden fill-current text-nord-night-light dark:text-nord-snow-dark" d="M12.3 22h-.1a10.31 10.31 0 0 1-7.34-3.15 10.46 10.46 0 0 1-.26-14 
-                       10.13 10.13 0 0 1 4-2.74 1 1 0 0 1 1.06.22 1 1 0 0 1 .24 1 8.4 8.4 0 0 0 1.94 8.81 8.47 8.47 
-                       0 0 0 8.83 1.94 1 1 0 0 1 1.27 1.29A10.16 10.16 0 0 1 19.6 19a10.28 10.28 0 0 1-7.3 3z">
+          <path data-theme-target="moon" 
+                class="hidden fill-current text-nord-night-light dark:text-nord-snow-dark" 
+                d="M12.3 22h-.1a10.31 10.31 0 0 1-7.34-3.15 10.46 10.46 0 0 1-.26-14 
+                   10.13 10.13 0 0 1 4-2.74 1 1 0 0 1 1.06.22 1 1 0 0 1 .24 1 8.4 8.4 0 0 0 1.94 8.81 8.47 8.47 
+                   0 0 0 8.83 1.94 1 1 0 0 1 1.27 1.29A10.16 10.16 0 0 1 19.6 19a10.28 10.28 0 0 1-7.3 3z">
           </path>
-          <path data-theme-target="sun" class="hidden fill-current text-nord-night-light dark:text-nord-snow-dark" d="M12 6a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1zm9 5h-2a1 1 0 0 0 0 2h2a1 1 
-                   0 0 0 0-2zM6 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h2a1 1 0 0 0 1-1zm.22-7a1 1 0 0 0-1.39 1.47l1.44 1.39a1 1 0 0 0 .73.28 1 1 0 0 0 .72-.31 
-                   1 1 0 0 0 0-1.41zM17 8.14a1 1 0 0 0 .69-.28l1.44-1.39A1 1 0 0 0 17.78 5l-1.44 1.42a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.31zM12 18a1 1 0 0 0-1 
-                   1v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1zm5.73-1.86a1 1 0 0 0-1.39 1.44L17.78 19a1 1 0 0 0 .69.28 1 1 0 0 0 .72-.3 1 1 0 0 0 0-1.42zm-11.46 
-                   0l-1.44 1.39a1 1 0 0 0 0 1.42 1 1 0 0 0 .72.3 1 1 0 0 0 .67-.25l1.44-1.39a1 1 0 0 0-1.39-1.44zM12 8a4 4 0 1 0 4 4 4 4 0 0 0-4-4z"></path>
+          <path 
+            data-theme-target="sun" 
+            class="hidden fill-current text-nord-night-light dark:text-nord-snow-dark" 
+            d="M12 6a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1zm9 5h-2a1 1 0 0 0 0 2h2a1 1 
+               0 0 0 0-2zM6 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h2a1 1 0 0 0 1-1zm.22-7a1 1 0 0 0-1.39 1.47l1.44 1.39a1 1 0 0 0 .73.28 1 1 0 0 0 .72-.31 
+               1 1 0 0 0 0-1.41zM17 8.14a1 1 0 0 0 .69-.28l1.44-1.39A1 1 0 0 0 17.78 5l-1.44 1.42a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.31zM12 18a1 1 0 0 0-1 
+               1v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1zm5.73-1.86a1 1 0 0 0-1.39 1.44L17.78 19a1 1 0 0 0 .69.28 1 1 0 0 0 .72-.3 1 1 0 0 0 0-1.42zm-11.46 
+               0l-1.44 1.39a1 1 0 0 0 0 1.42 1 1 0 0 0 .72.3 1 1 0 0 0 .67-.25l1.44-1.39a1 1 0 0 0-1.39-1.44zM12 8a4 4 0 1 0 4 4 4 4 0 0 0-4-4z"
+           >
           </path>
-        </svg>
-      </button>
-    </nav>
-  </div>
+        </path>
+      </svg>
+    </button>
+  </nav>
+</div>
 </header>

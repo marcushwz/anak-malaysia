@@ -1,22 +1,26 @@
-<main class="h-auto grid grid-cols-1 bg-nord-snow-light dark:bg-nord-night-darker">
-  <section class="bg-nord-snow-light dark:bg-nord-night-darker">
+<main class="h-auto grid grid-cols-1 bg-nord-snow-light dark:bg-nord-night">
+  <section class="bg-nord-snow-light dark:bg-nord-night">
     <div class="px-8 pt-16 grid grid-cols-1 md:grid-cols-2 max-w-screen-xl mx-auto">
       <div class="flex flex-col p-4 items-center md:items-start">
         <div class="mb-8 md:hidden">
           <%= image_tag("malaysia-flag-map.png") %>
         </div>
-        <h1 class="text-3xl font-semibold text-nord-night-light dark:text-nord-snow-dark md:text-4xl lg:text-5xl">Malaysia For All.</h1>
+        <h1 class="text-3xl font-semibold text-nord-night-light dark:text-nord-snow-dark md:text-4xl lg:text-5xl">
+          Malaysia
+        </h1>
         <div class="mt-4 text-xl text-center text-nord-night-light dark:text-nord-snow-dark md:text-left lg:text-2xl lg:leading-relaxed lg:mt-8">
           <p>
-            Together, we can make Malaysia better.
-            <br class="hidden lg:inline" />
-            Let's get to know fellow Malaysians better one story at a time.
+            Our beloved country that I am not ready to give up.
+            This is my way of protecting it by
+            showcasing her <b>histories, politicians, and people.</b>
           </p>
         </div>
         <div>
-          <button class="mt-8 py-2 px-4 font-medium text-lg rounded shadow-md bg-nord-primary-light text-nord-night transform transition hover:-translate-y-0.5 hover:shadow-lg hover:bg-nord-primary">
-            Malaysian's Stories
-          </button>
+          <%= button_to "Mission & Vision", 
+            static_pages_about_path,
+            method: "get", 
+            class: "btn btn-primary" 
+          %>
         </div>
       </div>
       <div class="hidden items-center justify-items-center p-4 md:inline-grid">
@@ -26,69 +30,122 @@
       </div>
     </div>
     <div class="mt-14">
-      <svg class="fill-current text-nord-snow dark:text-nord-night-dark" viewBox="0 0 1440 47" xmlns="http://www.w3.org/2000/svg"><path d="M0 .058c117.505 18.386 269.602 22.114 456.294 11.185C562.076 5.051 730.784.911 885.297 3.273 1157.177 7.432 1386.981 21.329 1440 38.39v8.55H0V.058z"></path></svg>
+      <svg class="fill-current text-nord-snow dark:text-nord-night-dark" viewBox="0 0 1440 47" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 .058c117.505 18.386 269.602 22.114 456.294 11.185C562.076 5.051 730.784.911 885.297 3.273 1157.177 7.432 1386.981 21.329 1440 38.39v8.55H0V.058z"></path>
+      </svg>
     </div>
   </section>
   <section class="bg-nord-snow dark:bg-nord-night-dark">
-    <div class="px-8 pt-16 grid grid-cols-1 max-w-screen-xl mx-auto">
-      <div class="flex flex-col p-4 items-center">
-        <h1 class="text-3xl font-semibold text-nord-night-light dark:text-nord-snow-dark md:text-4xl lg:text-5xl">Mission & Vision</h1>
-        <div class="mt-4 text-xl text-center text-nord-night-light dark:text-nord-snow-dark lg:text-2xl lg:leading-relaxed lg:mt-8">
+    <div class="px-8 pt-16 grid grid-cols-1 md:grid-cols-2 max-w-screen-xl mx-auto">
+      <div class="hidden items-center justify-items-center p-4 md:inline-grid">
+        <div>
+          <%= image_tag("merdeka.jpg", class: "rounded-2xl") %>
+        </div>
+      </div>
+      <div class="flex flex-col p-4 items-center md:items-start md:pl-12">
+        <div class="mb-8 md:hidden">
+          <%= image_tag("merdeka.jpg", class: "rounded-2xl") %>
+        </div>
+        <h1 class="text-3xl font-semibold text-nord-night-light dark:text-nord-snow-dark md:text-4xl lg:text-5xl">
+          History
+        </h1>
+        <div class="mt-4 text-xl text-center text-nord-night-light dark:text-nord-snow-dark md:text-left lg:text-2xl lg:leading-relaxed lg:mt-8">
           <p>
-            Spread love and promote unity among Malaysians.
-            <br />
-            One stop center for all Malaysian things.
+            Tapping into the vivid realm of her history so that Anak Malaysia can get 
+            inspiration and also learn from the mistakes.
           </p>
         </div>
         <div>
           <%= button_to "Learn More", 
-            static_pages_about_path,
+            static_pages_history_path,
             method: "get", 
-            class: "bg-nord-snow dark:bg-nord-night-dark mt-8 py-2 px-4 font-medium text-lg text-nord-night-light shadow-md rounded-lg transition border-solid border-2 border-nord-night-light dark:border-nord-snow dark:text-nord-snow hover:border-nord-primary-dark hover:text-nord-primary-dark dark:hover:border-nord-primary dark:hover:text-nord-primary cursor-pointer" 
+            class: "btn btn-secondary" 
           %>
         </div>
       </div>
-      <div class="sm:w-2/3 h-auto mx-auto mt-4">
-        <%= image_tag("kl-skyline-vector.png") %>
-      </div>
     </div>
     <div class="mt-14">
-      <svg class="fill-current text-nord-snow-dark dark:text-nord-night-darker" viewBox="0 0 1440 94" xmlns="http://www.w3.org/2000/svg"><path d="M0 .91c37.102-3.789 72.529 8.207 112.12 35.083 104.792 71.133 186.932 18.896 299.41-18.297 112.476-37.193 128.544 64.109 218.349 43.87 89.805-20.238 155.519-61.91 327.519-21.16s253.141 66.825 357.309 36.95c49.177-14.104 85.113-37.259 125.293-57.88V94H0V.91z"></path></svg>
+      <svg class="fill-current text-nord-snow-light dark:text-nord-night" viewBox="0 0 1440 94" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 .91c37.102-3.789 72.529 8.207 112.12 35.083 104.792 71.133 186.932 18.896 299.41-18.297 
+          112.476-37.193 128.544 64.109 218.349 43.87 89.805-20.238 155.519-61.91 327.519-21.16s253.141 
+          66.825 357.309 36.95c49.177-14.104 85.113-37.259 125.293-57.88V94H0V.91z">
+        </path>
+      </svg>
     </div>
   </section>
-  <section class="bg-nord-snow-dark dark:bg-nord-night-darker">
+  <section class="bg-nord-snow-light dark:bg-nord-night">
     <div class="px-8 pt-16 grid grid-cols-1 md:grid-cols-2 max-w-screen-xl mx-auto">
       <div class="flex flex-col p-4 items-center md:items-start">
         <div class="mb-8 md:hidden">
-          <%= image_tag("software-engineer-vector.png") %>
+          <%= image_tag("politicians.png", class: "rounded-2xl") %>
         </div>
-        <h1 class="text-3xl font-semibold text-nord-night-light dark:text-nord-snow-dark md:text-4xl lg:text-5xl">Contribution</h1>
+        <h1 class="text-3xl font-semibold text-nord-night-light dark:text-nord-snow-dark md:text-4xl lg:text-5xl">
+          Politicians
+        </h1>
         <div class="mt-4 text-xl text-center text-nord-night-light dark:text-nord-snow-dark md:text-left lg:text-2xl lg:leading-relaxed lg:mt-8">
           <p>
-            This is an open-source project and any kind of contributions are welcome and very much appreciated.
+            Realising that Anak Malaysia is the one <b><i>"hiring"</i></b> them for their job.
+            Will you give them the offers after looking at their <i>resumes?</i>
           </p>
         </div>
         <div>
-          <%= button_to "Join Us", 
-            static_pages_contribution_path,
+          <%= button_to "Check Them Out", 
+            static_pages_politicians_path,
             method: "get", 
-            class: "bg-nord-snow-dark dark:bg-nord-night-darker mt-8 py-2 px-4 font-medium text-lg text-nord-night-light shadow-md rounded-lg transition border-solid border-2 border-nord-night-light dark:border-nord-snow dark:text-nord-snow hover:border-nord-primary-dark hover:text-nord-primary-dark dark:hover:border-nord-primary dark:hover:text-nord-primary cursor-pointer" 
+            class: "btn btn-secondary" 
           %>
         </div>
       </div>
       <div class="hidden items-center justify-items-center p-4 md:inline-grid">
         <div>
-          <%= image_tag("software-engineer-vector.png") %>
+          <%= image_tag("politicians.png", class: "rounded-2xl") %>
         </div>
       </div>
     </div>
     <div class="mt-14">
-      <svg viewBox="0 0 1920 250" xmlns="http://www.w3.org/2000/svg" class="fill-text-nord-snow dark:text-nord-night-darker">
+      <svg class="fill-current text-nord-snow-dark dark:text-nord-night-dark" viewBox="0 0 2000 242" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2000 75.463c-230.631 73.429-431.99 108.499-604.064 105.196-293.434-5.632-485.998-145.823-954.537-150.568C272.956 
+            28.385 125.825 50.689 0 96.996V242h2000V75.463z">
+        </path>
+      </svg>
+    </div>
+  </section>
+  <section class="bg-nord-snow-dark dark:bg-nord-night-dark">
+    <div class="px-8 pt-16 grid grid-cols-1 md:grid-cols-2 max-w-screen-xl mx-auto">
+      <div class="hidden items-center justify-items-center p-4 md:inline-grid">
+        <div>
+          <%= image_tag("malaysian.png", class: "rounded-2xl") %>
+        </div>
+      </div>
+      <div class="flex flex-col p-4 items-center md:items-start md:pl-12">
+        <div class="mb-8 md:hidden">
+          <%= image_tag("malaysian.png", class: "rounded-2xl") %>
+        </div>
+        <h1 class="text-3xl font-semibold text-nord-night-light dark:text-nord-snow-dark md:text-4xl lg:text-5xl">
+          Malaysian
+        </h1>
+        <div class="mt-4 text-xl text-center text-nord-night-light dark:text-nord-snow-dark md:text-left lg:text-2xl lg:leading-relaxed lg:mt-8">
+          <p>
+            Capturing all of the <i>heartwarming, heartbreaking, motivating and demotivating</i>
+            stories, ideas, and opinions of Anak Malaysia.
+          </p>
+        </div>
+        <div>
+          <%= button_to "Story of Our Lifes", 
+            static_pages_malaysian_path,
+            method: "get", 
+            class: "btn btn-secondary" 
+          %>
+        </div>
+      </div>
+    </div>
+    <div class="mt-14">
+      <svg viewBox="0 0 1920 250" xmlns="http://www.w3.org/2000/svg" class="fill-text-nord-snow dark:text-nord-night">
         <path d="M1920 144s-467.917 116.857-1027.243-17.294C369.986 1.322 0 45.578 0 45.578V250h1920V144z" 
-          class="fill-current text-nord-snow dark:text-nord-night">
+          class="fill-current text-nord-snow dark:text-nord-night-light">
         </path>
         <path d="M0 195.553s208.547-75.581 701.325-20.768c376.707 41.908 520.834-67.962 722.545-67.962 222.926 0 311.553 83.523 496.129 86.394V250H0v-54.447z" 
-          class="fill-current text-nord-snow-light dark:text-nord-night-light">
+          class="fill-current text-nord-snow-light dark:text-nord-night-lighter">
         </path>
       </svg>
     </div>
